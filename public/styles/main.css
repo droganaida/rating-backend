@@ -1,0 +1,89 @@
+body, html {padding: 0;margin: 0; height: 100%}
+body {
+    background: #efefef; color: #2d2d2d;
+    font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+h1 {font-size: 24px;}
+h2 {font-size: 22px;}
+a {color: #4f8d88}
+a:hover {color: #1ea59b}
+header, footer {
+    background: #4f8d88;
+    color: #ffffff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+header a {color: #ffffff; opacity: .8; transition: .3s;}
+header a:hover {color: #ffffff; opacity: 1; transition: .3s;}
+header h1 {
+    margin: 0;
+}
+.content {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-grow: 1;
+}
+/*------------------------------стили для рейтинга--------------------------*/
+.ratingHolder {
+    width: 210px;
+    position: relative;
+}
+.ratingHolder .userRatingHolder {
+    opacity: 0;
+    transition: .1s;
+}
+.ratingHolder:hover .userRatingHolder, .ratingHolder.voted .userRatingHolder {opacity: 1; transition: .1s;}
+.ratingHolder .userRating {
+    position: absolute; top: -10px; left: 0;
+    padding: 10px 16px;
+    cursor: pointer;
+    z-index: 9999;
+    background-color: #ffffff;
+    border-radius: 5px;
+    width: 178px; height: 31px;
+}
+.ratingHolder.voted .userRating {background-color: #598a86;}
+.ratingHolder .passiveRatingHolder {
+    position: relative;
+    width: 178px; height: 37px;
+    left: 50%; margin-left: -89px; display: block;
+}
+.ratingHolder .passiveRatingHolder > div {
+    position:absolute; left: 0; top: 0;
+    height: 37px;
+    background-image: url("https://dl.dropboxusercontent.com/u/65675180/blondiecode/stars.svg");
+    background-repeat: no-repeat;
+    background-size: 178px;
+}
+.ratingHolder .passiveRatingHolder .ratingBg {background-position: 0 0; width: 178px; z-index: 1;}
+.ratingHolder .passiveRatingHolder .ratingMask {background-position: 0 -41px; z-index: 99;}
+.ratingHolder .vote {
+    transition: .2s;
+    position: absolute; top: 0;
+    cursor: pointer;
+    z-index: 99999;
+    width: 32px; height: 31px;
+    background-image: url("https://dl.dropboxusercontent.com/u/65675180/blondiecode/stars.svg");
+    background-repeat: no-repeat; background-position: 0 0; background-size: 178px;
+}
+.ratingHolder .vote:hover ~ .vote, .vote.active ~ .vote {transition: .2s; background-position: 0 -41px;}
+.ratingHolder .vote:hover, .ratingHolder.voted .vote.active {transition: .2s; background-position: 0 -81px;}
+.ratingHolder .votingHolder {direction: rtl; position: relative}
+.ratingHolder .vote.onestar {left: 80%;}
+.ratingHolder .vote.twostar {left: 60%;}
+.ratingHolder .vote.threestar {left: 40%;}
+.ratingHolder .vote.fourstar {left: 20%;}
+.ratingHolder .vote.fivestar {left: 0;}
+.ratingHolder.voted .vote {pointer-events:none;}
+.ratingHolder.voted .vote:hover {background-position: 0 0;}
+.ratingHolder.voted .vote.active ~ .vote {background-position: 0 -41px;}
+.ratingHolder.voted .vote.active:hover {background-position: 0 -81px;}
+.ratingHolder .rateNumbers {text-align: center; width: 100%; color: #a1a1a1;font-size: 14px;}
+.ratingHolder .rateNumbers .ratingvalue {color: #2d2d2d; font-size: 26px;}
+.ratingHolder .rateNumbers .bestrating {margin-bottom: 4px; display: inline-block; font-size: 20px;}
+.ratingHolder .text {color: #4f8d88; text-align: center; margin: 0; opacity: 0; transition: .1s; height: 0px;}
+.ratingHolder.voted .text {opacity: 1; margin: 10px 0 0 0; transition: .1s; height: auto;}

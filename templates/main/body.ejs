@@ -1,0 +1,49 @@
+<div class="content" id="<%=page._id%>">
+    <h2>Рейтинг статьи - 5 звезд. CSS + HTML + микроразметка</h2>
+
+    <!--рейтинг начинается тут-->
+    <div itemscope="" itemtype="http://schema.org/CollectionPage" class="ratingHolder">
+        <div class="userRatingHolder">
+            <div class="userRating">
+                <div class="votingHolder">
+                    <div data-score="5" class="vote onestar"></div>
+                    <div data-score="4" class="vote twostar"></div>
+                    <div data-score="3" class="vote threestar"></div>
+                    <div data-score="2" class="vote fourstar"></div>
+                    <div data-score="1" class="vote fivestar"></div>
+                </div>
+            </div>
+        </div>
+        <div class="passiveRatingHolder">
+            <div class="ratingBg"></div>
+            <div style="width: 85%;" class="ratingMask"></div>
+        </div>
+        <div class="text">Ваш голос учтен! Оценка: </div>
+        <div class="rateNumbers">
+            <div itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">
+                <span itemprop="ratingValue" class="ratingvalue"><%=average%></span>
+                /
+                <span itemprop="bestRating" class="bestrating">5.00</span>
+                <div class="br"></div>
+                (
+                <span itemprop="reviewCount" class="commentscount"><%=page.votes%></span>
+                голосов)
+            </div>
+        </div>
+    </div>
+    <!--рейтинг заканчивается тут-->
+
+    <p><b>Привет, коллеги!</b>
+        <br/>
+        Меня зовут Ася, и я программист. Я создала <a href="https://www.youtube.com/channel/UCSsg9NLCse2XQCIRgfmJu3Q" target="_blank">этот блог</a> для того, чтобы доказать, что программировать можно легко и с удовольствием.
+        На моем канале вы можете найти курс <b>&laquo;Программирование для всех&raquo;</b>, где я объясняю базовые принципы программирования на стаканах,
+        кошках, картошке и привидениях. Курс рассчитан на новичков, которые хотят стать программистами, но не знают с чего начать.
+    </p>
+    <p><b>Опытный программист, не проходи мимо моего канала!</b> Посмотри &laquo;Программирование для всех&raquo; под пивко в качестве развлекательного видео
+        и нажми кнопку &laquo;подписаться&raquo;. Скоро я планирую выпустить курс по созданию front end и back end серверов. Буду делиться знаниями
+        в области node.js, mongodb, jQuery, html, css и немного SEO + настройка серверов под ubuntu.</p>
+    <p>А пока <b>поддержи меня лайком</b>! Это
+        очень тяжело создавать материал и не получать отдачи. Если видео никому не интересно и бесполезно, нафиг надо делать следующее.
+        А понять, что оно полезно помогает кнопка с пальчиком вверх =)</p>
+    <p><b>Всем удачного программирования!</b></p>
+</div>
