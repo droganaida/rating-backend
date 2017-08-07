@@ -55,7 +55,7 @@ header h1 {
 .ratingHolder .passiveRatingHolder > div {
     position:absolute; left: 0; top: 0;
     height: 37px;
-    background-image: url("https://dl.dropboxusercontent.com/u/65675180/blondiecode/stars.svg");
+    background-image: url("/images/stars.svg");
     background-repeat: no-repeat;
     background-size: 178px;
 }
@@ -67,7 +67,7 @@ header h1 {
     cursor: pointer;
     z-index: 99999;
     width: 32px; height: 31px;
-    background-image: url("https://dl.dropboxusercontent.com/u/65675180/blondiecode/stars.svg");
+    background-image: url("/images/stars.svg");
     background-repeat: no-repeat; background-position: 0 0; background-size: 178px;
 }
 .ratingHolder .vote:hover ~ .vote, .vote.active ~ .vote {transition: .2s; background-position: 0 -41px;}
